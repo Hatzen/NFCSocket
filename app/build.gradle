@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    namespace 'com.chrisplus.nfcsocketexample'
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "com.chrisplus.nfcsocket"
         minSdkVersion 19
-        targetSdkVersion 22
+        targetSdkVersion 31
         versionCode 150
         versionName "1.5"
     }
@@ -20,7 +20,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:22.0.0'
-    compile project(':nfcsocket')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation project(':nfcsocket')
 }
